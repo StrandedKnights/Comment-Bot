@@ -14,7 +14,7 @@ Clone the repository:
 
 bash
 
-git clone https://github.com/your-repo/pumpfun-advanced-comment-bot.git
+git clone https://github.com/StrandedKnights/Comment-Bot.git
 cd pumpfun-advanced-comment-bot
 
 
