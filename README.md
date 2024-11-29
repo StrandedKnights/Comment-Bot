@@ -33,29 +33,30 @@ A fully automated, advanced comment bot for Pump.fun with integrated license val
 
 The **paid full version** includes:
 1. **Server-Sided HMAC License Verification**
+   
    2. All licenses are validated securely on a server using HMAC verification.
    3. Prevents unauthorized usage or license tampering.
 
-2. **Rate Limiting**
+3. **Rate Limiting**
    2. Optimize API usage and prevent detection with built-in rate-limiting features.
 
-3. **Enhanced Encryption**
+4. **Enhanced Encryption**
    2. Communication with Pump.fun APIs is encrypted to ensure data security.
 
-4. **Free API Access**
+5. **Free API Access**
    2. Includes free API tiers for fetching trending tokens and other platform interactions.
 
-5. **Advanced Metrics and Logging**
+6. **Advanced Metrics and Logging**
    2. Tracks every session, including:
 	 - License key usage.
 	 - IP and geo-location details.
 	 - Operating system data.
 	 - API usage metrics.
 
-6. **Lifetime Upgrades**
+7. **Lifetime Upgrades**
    2. Full version users receive lifetime updates and access to all new features.
 
-7. **24/7 Support**
+8. **24/7 Support**
    2. Dedicated customer support team available around the clock.
 
 ---
