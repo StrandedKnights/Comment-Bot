@@ -1,11 +1,12 @@
-
-# PumpFun Advanced Comment Bot
+ PumpFun Advanced Comment Bot
 
 A fully automated, advanced comment bot for Pump.fun with integrated license validation, admin dashboard, and metrics tracking.
 
-JOIN @CRYPTOSWEEPERS ON TG FOR PURCHASING AND SUPPORT, WE ALSO OFFER DEPLOYMENTS FOR SCRIPTS @sweeperceo ON TG 
+**JOIN @CRYPTOSWEEPERS ON TG FOR PURCHASING AND SUPPORT. WE ALSO OFFER SCRIPT DEPLOYMENT SERVICES @SWEEPERCEO ON TG.**
 
-## Features
+---
+
+## **Features (Free Version)**
 
 ### Automated Commenting
 - Dynamically fetches trending tokens from Pump.fun.
@@ -17,16 +18,68 @@ JOIN @CRYPTOSWEEPERS ON TG FOR PURCHASING AND SUPPORT, WE ALSO OFFER DEPLOYMENTS
 
 ### Admin Dashboard
 - Manage licenses and track bot usage metrics.
-- Monitor IP addresses, geo-location, and OS info of users.
+- Monitor IP addresses, geo-location, and OS information of users.
 
 ### Metrics Collection
-- Tracks script usage details including:
+- Tracks script usage details, including:
   - IP addresses.
   - Geo-location.
   - Operating system details.
   - Timestamp of actions.
 
-## Installation
+---
+
+## **Full Version Features**
+
+The **paid full version** includes:
+1. **Server-Sided HMAC License Verification**
+   2. All licenses are validated securely on a server using HMAC verification.
+   3. Prevents unauthorized usage or license tampering.
+
+2. **Rate Limiting**
+   2. Optimize API usage and prevent detection with built-in rate-limiting features.
+
+3. **Enhanced Encryption**
+   2. Communication with Pump.fun APIs is encrypted to ensure data security.
+
+4. **Free API Access**
+   2. Includes free API tiers for fetching trending tokens and other platform interactions.
+
+5. **Advanced Metrics and Logging**
+   2. Tracks every session, including:
+	 - License key usage.
+	 - IP and geo-location details.
+	 - Operating system data.
+	 - API usage metrics.
+
+6. **Lifetime Upgrades**
+   2. Full version users receive lifetime updates and access to all new features.
+
+7. **24/7 Support**
+   2. Dedicated customer support team available around the clock.
+
+---
+
+## **Reseller Licensing**
+
+The **PumpFun Advanced Comment Bot** offers a **reseller license program** for those who wish to resell the bot.
+
+### **Reseller License Details**
+- **Initial Price**: $500 - $1,000 (one-time fee).
+- **Monthly Costs**:
+  - API costs: Includes usage fees for the Pump.fun API and other integrated services.
+  - Server costs: Covers hosting the license verification server.
+- **Benefits**:
+  - Full permission to resell the bot to your customers.
+  - Access to the license management system to generate and manage licenses.
+  - 24/7 support for resellers and their clients.
+  - Lifetime upgrades for both the bot and the reseller tools.
+
+To inquire about the reseller license, contact us via **@CRYPTOSWEEPERS** or **@SWEEPERCEO** on Telegram.
+
+---
+
+## **Installation**
 
 ### Clone the Repository
 ```bash
@@ -46,6 +99,7 @@ node licenseServer.js
 ```
 
 ### Configure Files
+
 #### `proxies.txt`
 Add your proxy list (one per line):
 ```
@@ -69,61 +123,30 @@ LICENSE_SERVER_URL=http://localhost:3000
 PROXY_ROTATION_ENABLED=true
 ```
 
-## Database Setup for Licensing
+---
 
-The licensing system uses a database (`licenses.db`) to store license and metrics information.
+## **Database Setup for Licensing**
 
-### Tables Overview
+The licensing system uses a SQLite database (`licenses.db`) to store license and metrics information.
 
-1. **`licenses` Table**:
-   2. Stores details of each license, such as license key, type, expiry date, and usage limits.
-
-2. **`metrics` Table**:
-   2. Tracks bot usage, including IP address, geo-location, and system information.
-
-### SQL Table Definitions
-
-#### Create `licenses` Table
-```sql
-CREATE TABLE IF NOT EXISTS licenses (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    license_key TEXT UNIQUE,
-    license_type TEXT,
-    expiry_date TEXT,
-    usage_limit INTEGER,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-```
-
-#### Create `metrics` Table
-```sql
-CREATE TABLE IF NOT EXISTS metrics (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    license_key TEXT,
-    ip_address TEXT,
-    geo_location TEXT,
-    os_info TEXT,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-```
-
-### How the Database Works
+### **Tables Overview**
 
 1. **`licenses` Table**:
-   2. Each license has:
-	 - A **unique license key** (e.g., `CS12345ABCDEF`).
-	 - A **license type** (`free_trial`, `paid`, or `unlimited`).
-	 - An **expiry date** for time-bound licenses.
-	 - A **usage limit**, which can restrict the number of devices or times the bot is used.
+   2. Stores details of each license, such as:
+	 - Unique license keys (e.g., `CS12345ABCDEF`).
+	 - License type (`free_trial`, `paid`, or `unlimited`).
+	 - Expiry dates and usage limits.
 
 2. **`metrics` Table**:
    2. Tracks:
-	 - The **license key** used during bot execution.
-	 - The **IP address** and **geo-location** (determined using the `geoip-lite` package).
-	 - The **operating system** information.
-	 - The **timestamp** of the action.
+	 - License key usage.
+	 - IP addresses and geo-location data.
+	 - Operating system information.
+	 - Timestamped bot activities.
 
-## Usage
+---
+
+## **Usage**
 
 ### Run the Bot
 ```bash
@@ -135,16 +158,20 @@ node pumpfunBot.js
 2. **Thread Mode**: Specify a thread ID manually to post comments.
 3. **Exit**: Quit the bot.
 
-## Admin Dashboard
+---
+
+## **Admin Dashboard**
 
 ### Features
-- **License Management**: Create and manage licenses.
-- **Usage Metrics**: View bot usage statistics in real-time.
+- **License Management**: Create and manage licenses via an intuitive interface.
+- **Usage Metrics**: Real-time visualization of bot usage and performance.
 
 ### Access the Dashboard
 Open the `dashboard.html` file in your browser to manage licenses and monitor metrics.
 
-## Requirements
+---
+
+## **Requirements**
 
 - **Node.js** v16+
 - **SQLite** (for license server)
@@ -156,14 +183,16 @@ Open the `dashboard.html` file in your browser to manage licenses and monitor me
   - `geoip-lite`
   - `sqlite3`
 
-## Example Workflow
+---
+
+## **Example Workflow**
 
 1. Start the license server:
 ```bash
 node licenseServer.js
 ```
 
-2. Create a license using the dashboard.
+2. Create a license using the admin dashboard.
 
 3. Run the bot:
 ```bash
@@ -172,10 +201,9 @@ node pumpfunBot.js
 
 4. Monitor usage metrics in the admin dashboard.
 
-## License
+---
 
-This project is licensed under the MIT License. See `LICENSE` for details.
+## **Disclaimer**
 
-## Disclaimer
+This bot is for educational purposes only. Ensure compliance with all applicable laws and the Pump.fun platform's terms of service.
 
-This project is for educational purposes only. Ensure that you comply with all applicable laws and the Pump.fun platform's terms of service.
